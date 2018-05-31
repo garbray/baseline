@@ -1,3 +1,6 @@
+// import styles from '../css/main.css';
+// console.log(styles);
+
 class App {
   constructor(html) {
     this.html = html;

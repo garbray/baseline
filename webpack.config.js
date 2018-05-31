@@ -3,23 +3,24 @@ const webpack = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = env => {
-  // if (env) {
-  //   // do something based on the env
-  //   console.log(env); // eslint-disable-line
-  // }
+  let modeVariable = 'production';
+  console.log(env);
+  if (env.development) {
+    modeVariable = 'development';
+  }
 
   return {
     context: resolve('src'),
     entry: ['babel-polyfill', './js/clientApp.js'],
     output: { path: resolve('dist'), filename: '[name].bundle.js' },
-    devtool: 'cheap-eval-source-map',
     stats: { colors: true, reasons: true, chunks: true, errors: true },
     resolve: { extensions: ['.js', '.json'] },
     plugins: [
-      new webpack.NamedModulesPlugin(),
-      new webpack.HotModuleReplacementPlugin(),
-      new BundleAnalyzerPlugin(),
+      // new webpack.NamedModulesPlugin(),
+      // new webpack.HotModuleReplacementPlugin(),
+      // new BundleAnalyzerPlugin(),
     ],
+    mode: modeVariable,
     module: {
       rules: [
         {
@@ -29,7 +30,17 @@ module.exports = env => {
           exclude: /node_modules/,
         },
         { test: /\.js/, loader: 'babel-loader', include: resolve('src/js') },
+        {
+          test: /\.css/,
+          loaders: ['style-loader', 'css'],
+          include: resolve('src/css')
+        },
       ],
     },
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      }
+    }
   };
 };

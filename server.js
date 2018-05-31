@@ -6,7 +6,8 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const app = express();
-const webpackConfig = require('./webpack.config')({ prod: true });
+const isDevelopment =  process.env.NODE_ENV ==='production';
+const webpackConfig = require('./webpack.config')({ development: isDevelopment });
 const port = 3000;
 
 nunjucks.configure(`${__dirname}/src/templates`,{
@@ -25,7 +26,7 @@ app.use(
 // Hot module replacement
 app.use(webpackHotMiddleware(compiler));
 // output static files
-app.use('/dist', express.static('./dist'));
+app.use('/', express.static('./dist'));
 
 app.get('/', (req, res) => {
   res.render('pages/index.html');
