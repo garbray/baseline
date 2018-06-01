@@ -1,12 +1,18 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = env => {
   let modeVariable = 'production';
-  console.log(env);
+  let developmentPlugins = [];
+
   if (env.development) {
     modeVariable = 'development';
+    developmentPlugins = [
+      new webpack.NamedModulesPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new BundleAnalyzerPlugin(),
+    ];
   }
 
   return {
@@ -15,11 +21,7 @@ module.exports = env => {
     output: { path: resolve('dist'), filename: '[name].bundle.js' },
     stats: { colors: true, reasons: true, chunks: true, errors: true },
     resolve: { extensions: ['.js', '.json'] },
-    plugins: [
-      // new webpack.NamedModulesPlugin(),
-      // new webpack.HotModuleReplacementPlugin(),
-      // new BundleAnalyzerPlugin(),
-    ],
+    plugins: [].concat(developmentPlugins),
     mode: modeVariable,
     module: {
       rules: [
@@ -33,14 +35,10 @@ module.exports = env => {
         {
           test: /\.css/,
           loaders: ['style-loader', 'css'],
-          include: resolve('src/css')
+          include: resolve('src/css'),
         },
       ],
     },
-    optimization: {
-      splitChunks: {
-        chunks: 'all'
-      }
-    }
+    optimization: { splitChunks: { chunks: 'all' } },
   };
 };
