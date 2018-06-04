@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "EMprint-CondensedLightIt";
+    src: url("EMprint-CondensedLightIt.eot");
+    src: url("EMprint-CondensedLightIt.eot?#iefix") format("embedded-opentype"),
+         url("EMprint-CondensedLightIt.woff2") format("woff2"),
+         url("EMprint-CondensedLightIt.woff") format("woff"),
+         url("EMprint-CondensedLightIt.ttf") format("ttf"),
+         url("EMprint-CondensedLightIt.svg#EMprint-CondensedLightIt") format("svg");
+    font-style: italic;
+    font-weight: 300;
+}

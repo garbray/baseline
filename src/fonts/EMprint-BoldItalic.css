@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "EMprint-BoldItalic";
+    src: url("EMprint-BoldItalic.eot");
+    src: url("EMprint-BoldItalic.eot?#iefix") format("embedded-opentype"),
+         url("EMprint-BoldItalic.woff2") format("woff2"),
+         url("EMprint-BoldItalic.woff") format("woff"),
+         url("EMprint-BoldItalic.ttf") format("ttf"),
+         url("EMprint-BoldItalic.svg#EMprint-BoldItalic") format("svg");
+    font-style: italic;
+    font-weight: 700;
+}

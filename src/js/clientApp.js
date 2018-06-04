@@ -1,5 +1,6 @@
-// import styles from '../css/main.css';
-// console.log(styles);
+import styles from '../css/main.css';
+
+console.log('ok', styles); // eslint-disable-line
 
 class App {
   constructor(html) {

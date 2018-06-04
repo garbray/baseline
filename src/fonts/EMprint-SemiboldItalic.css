@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "EMprint-SemiboldItalic";
+    src: url("EMprint-SemiboldItalic.eot");
+    src: url("EMprint-SemiboldItalic.eot?#iefix") format("embedded-opentype"),
+         url("EMprint-SemiboldItalic.woff2") format("woff2"),
+         url("EMprint-SemiboldItalic.woff") format("woff"),
+         url("EMprint-SemiboldItalic.ttf") format("ttf"),
+         url("EMprint-SemiboldItalic.svg#EMprint-SemiboldItalic") format("svg");
+    font-style: italic;
+    font-weight: demi;
+}

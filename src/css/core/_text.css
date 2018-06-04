@@ -1,0 +1,47 @@
+// File:           _text.scss
+// Description:    Site-wide text styles
+//
+//         ◡◠ ✥ ◠◡
+//
+//     Table of Contents:
+//
+//     1. Text
+//     2. Responsive
+
+// ---------------------------------------
+//     1. Text
+// ---------------------------------------
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  span {
+    font-family: inherit;
+  }
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+h5 {
+}
+
+h6 {
+}
+
+p {
+}
+
+.text--small {
+}

@@ -15,6 +15,8 @@ module.exports = env => {
     ];
   }
 
+  console.log(`===--Compilation Development ${env.development}--===`); // eslint-disable-line
+
   return {
     context: resolve('src'),
     entry: ['babel-polyfill', './js/clientApp.js'],
@@ -34,11 +36,25 @@ module.exports = env => {
         { test: /\.js/, loader: 'babel-loader', include: resolve('src/js') },
         {
           test: /\.css/,
-          loaders: ['style-loader', 'css'],
+          loaders: [
+            'style-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: { path: './build-scripts/postcss.config.js' },
+              },
+            },
+          ],
           include: resolve('src/css'),
         },
       ],
     },
-    optimization: { splitChunks: { chunks: 'all' } },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '-',
+        name: true,
+      },
+    },
   };
 };

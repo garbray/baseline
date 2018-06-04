@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "EMprint-Bold";
+    src: url("EMprint-Bold.eot");
+    src: url("EMprint-Bold.eot?#iefix") format("embedded-opentype"),
+         url("EMprint-Bold.woff2") format("woff2"),
+         url("EMprint-Bold.woff") format("woff"),
+         url("EMprint-Bold.ttf") format("ttf"),
+         url("EMprint-Bold.svg#EMprint-Bold") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}
