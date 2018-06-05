@@ -1,8 +1,8 @@
-@import 'utils/_variables.css';
-@import 'utils/_reset.css';
+@import '/utils/_variables.css';
+@import '/utils/_reset.css';
 
 html {
-  background: var(--ex-el-light-blue);
+  background: var(--ex-blue);
 
   @media (width >= 500px) and (width <= 1200px) {
     background: var(--ex-blue);

@@ -19,7 +19,11 @@ module.exports = env => {
 
   return {
     context: resolve('src'),
-    entry: ['babel-polyfill', './js/clientApp.js', 'webpack-hot-middleware/client'],
+    entry: [
+      'babel-polyfill',
+      './js/clientApp.js',
+      'webpack-hot-middleware/client',
+    ],
     output: {
       // path: resolve('dist'),
       filename: '[name].bundle.js',
@@ -44,7 +48,7 @@ module.exports = env => {
           test: /\.css/,
           loaders: [
             'style-loader',
-            'css-loader',
+            { loader: 'css-loader', options: { importLoaders: 1 } },
             {
               loader: 'postcss-loader',
               options: {
