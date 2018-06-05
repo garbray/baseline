@@ -12,6 +12,10 @@ module.exports = env => {
       new webpack.NamedModulesPlugin(),
       // new webpack.HotModuleReplacementPlugin(),
       // new BundleAnalyzerPlugin(),
+      new webpack.SourceMapDevToolPlugin({
+        filename: '[name].js.map',
+        exclude: ['vendor.js']
+      }),
     ];
   }
 
@@ -47,12 +51,13 @@ module.exports = env => {
         {
           test: /\.css/,
           loaders: [
-            'style-loader',
-            { loader: 'css-loader', options: { importLoaders: 1 } },
+            { loader: 'style-loader', options: { sourceMap: true } },
+            { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
             {
               loader: 'postcss-loader',
               options: {
                 config: { path: './build-scripts/postcss.config.js' },
+                sourceMap: true
               },
             },
           ],
