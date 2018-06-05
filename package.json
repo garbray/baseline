@@ -8,6 +8,7 @@
   "dependencies": {
     "@babel/core": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
+    "autoprefixer": "^8.6.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
@@ -58,7 +59,14 @@
     "lint": "eslint src/**/*.{js,jsx}",
     "server": "NODE_ENV=production node server.js"
   },
+  "browserslist": [
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 9"
+  ],
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "css-mqpacker": "^6.0.2"
   }
 }
