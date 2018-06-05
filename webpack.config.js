@@ -19,7 +19,7 @@ module.exports = env => {
 
   return {
     context: resolve('src'),
-    entry: ['babel-polyfill', './js/clientApp.js'],
+    entry: ['babel-polyfill', './js/clientApp.js', 'webpack-hot-middleware/client'],
     output: {
       // path: resolve('dist'),
       filename: '[name].bundle.js',
