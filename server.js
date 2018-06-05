@@ -12,7 +12,8 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 const webpackConfig = require('./webpack.config')({
   development: isDevelopment,
 });
-const port = 3000;
+const bs = browserSync.create();
+const port = 8000;
 
 nunjucks.configure(`${__dirname}/src/templates`, {
   autoescape: true,
@@ -40,12 +41,12 @@ app.get('/', (req, res) => {
   res.render('pages/index.html');
 });
 
-// browserSync.init(null, {
-//   proxy: 'http://localhost:3000',
-//   files: ['src/js/*', 'src/css/*'],
-//   port: 7000,
-// });
-
 app.listen(port, () => {
   console.log('server listen 3000 port'); // eslint-disable-line
+});
+
+bs.init({
+  proxy: 'http://localhost:8000',
+  files: ['./dist/**.*'],
+  // port: 8080,
 });
