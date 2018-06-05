@@ -1,14 +1,10 @@
+@import 'utils/_variables.css';
 @import 'utils/_reset.css';
 
-:root {
-  --papaya: papayawhip;
-  --peru: peru;
-}
-
 html {
-  background: var(--papaya);
+  background: var(--ex-el-light-blue);
 
   @media (width >= 500px) and (width <= 1200px) {
-    background: var(--peru);
+    background: var(--ex-blue);
   }
 }

@@ -1,0 +1,34 @@
+:root {
+  // main colors
+  --ex-red: #fe000c;
+  --ex-blue: #0c479d;
+  --ex-el-red: #d5000a;
+  --ex-el-blue: #2369bd;
+  --ex-el-light-blue: #3c89e5;
+  // black
+  --ex-black: #333;
+  --ex-black-100: #5a5a5a;
+  --ex-black-200: #6d6e71;
+  --ex-black-300: #939598;
+  --ex-black-400: #b1b3b6;
+  --ex-black-500: #d1d3d4;
+  --ex-black-600: #e6e7e8;
+  --ex-black-700: #f1f2f2;
+  // accent
+  --ex-accent-red: #990e29;
+  --ex-accent-orange: #f95421;
+  --ex-accent-orange-100: #fc7e00;
+  --ex-accent-orange-200: #ffac3e;
+  --ex-accent-yellow: #ffd700;
+  --ex-accent-lemon: #b4d405;
+  --ex-accent-green: #00a14d;
+  --ex-accent-aqua: #00aca8;
+  --ex-accent-ocean: #007096;
+  --ex-accent-sky: #00a3e0;
+  --ex-accent-blue: #002f6c;
+  --ex-accent-blue-100: #3a397b;
+  --ex-accent-affair: #7a4183;
+  --ex-accent-red-violet: #bd2f7f;
+  --ex-accent-violet: #890c58;
+  --ex-accent-cabaret: #d73872;
+}
