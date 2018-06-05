@@ -11,7 +11,7 @@ module.exports = env => {
     developmentPlugins = [
       new webpack.NamedModulesPlugin(),
       new webpack.HotModuleReplacementPlugin(),
-      new BundleAnalyzerPlugin(),
+      // new BundleAnalyzerPlugin(),
     ];
   }
 
@@ -23,7 +23,9 @@ module.exports = env => {
     output: { path: resolve('dist'), filename: '[name].bundle.js' },
     stats: { colors: true, reasons: true, chunks: true, errors: true },
     resolve: { extensions: ['.js', '.json'] },
-    plugins: [].concat(developmentPlugins),
+    plugins: [new webpack.HotModuleReplacementPlugin()].concat(
+      developmentPlugins,
+    ),
     mode: modeVariable,
     module: {
       rules: [

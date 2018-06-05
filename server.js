@@ -1,5 +1,6 @@
 require('babel-register');
 const express = require('express');
+const browserSync = require('browser-sync');
 const webpack = require('webpack');
 const nunjucks = require('nunjucks');
 const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -7,7 +8,6 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const app = express();
 const isDevelopment = process.env.NODE_ENV !== 'production';
-console.log(isDevelopment);
 const webpackConfig = require('./webpack.config')({
   development: isDevelopment,
 });
@@ -18,7 +18,7 @@ nunjucks.configure(`${__dirname}/src/templates`, {
   express: app,
 });
 
-const compiler = webpack(webpackConfig); // eslint-disable-line
+const compiler = webpack(webpackConfig);
 
 app.use(
   webpackDevMiddleware(compiler, {
@@ -35,6 +35,12 @@ app.get('/', (req, res) => {
   res.render('pages/index.html');
 });
 
+browserSync.init(null, {
+  proxy: 'http://localhost:3000',
+  files: ['src/**/*.*'],
+  port: 7000,
+});
+
 app.listen(port, () => {
-  console.log('server listen 3000 port');
+  console.log('server listen 3000 port'); // eslint-disable-line
 });
