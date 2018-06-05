@@ -1,5 +1,6 @@
 require('babel-register');
 const express = require('express');
+// const path = require('path');s
 const browserSync = require('browser-sync');
 const webpack = require('webpack');
 const nunjucks = require('nunjucks');
@@ -18,16 +19,20 @@ nunjucks.configure(`${__dirname}/src/templates`, {
   express: app,
 });
 
-const compiler = webpack(webpackConfig);
+if (isDevelopment) {
+  const compiler = webpack(webpackConfig);
 
-app.use(
-  webpackDevMiddleware(compiler, {
-    publicPath: webpackConfig.output.path,
-  }),
-);
+  app.use(
+    webpackDevMiddleware(compiler, {
+      publicPath: webpackConfig.output.path,
+      writeToDisk: true,
+    }),
+  );
 
-// Hot module replacement
-app.use(webpackHotMiddleware(compiler));
+  // Hot module replacement
+  app.use(webpackHotMiddleware(compiler));
+}
+
 // output static files
 app.use('/', express.static('./dist'));
 
@@ -35,11 +40,11 @@ app.get('/', (req, res) => {
   res.render('pages/index.html');
 });
 
-browserSync.init(null, {
-  proxy: 'http://localhost:3000',
-  files: ['src/**/*.*'],
-  port: 7000,
-});
+// browserSync.init(null, {
+//   proxy: 'http://localhost:3000',
+//   files: ['src/js/*', 'src/css/*'],
+//   port: 7000,
+// });
 
 app.listen(port, () => {
   console.log('server listen 3000 port'); // eslint-disable-line

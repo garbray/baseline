@@ -55,9 +55,9 @@
     "prebuild": "yarn removeDist",
     "build": "webpack -p --env.prod",
     "build:dev": "webpack -d --env.dev",
-    "start": "NODE_ENV=development nodemon server.js",
+    "start": "NODE_ENV=development node server.js",
     "lint": "eslint src/**/*.{js,jsx}",
-    "server": "NODE_ENV=server nodemon server.js"
+    "server": "NODE_ENV=production node server.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0"

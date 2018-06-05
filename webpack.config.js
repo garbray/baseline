@@ -1,6 +1,6 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = env => {
   let modeVariable = 'production';
@@ -10,17 +10,21 @@ module.exports = env => {
     modeVariable = 'development';
     developmentPlugins = [
       new webpack.NamedModulesPlugin(),
-      new webpack.HotModuleReplacementPlugin(),
+      // new webpack.HotModuleReplacementPlugin(),
       // new BundleAnalyzerPlugin(),
     ];
   }
 
-  console.log(`===--Compilation Development ${env.development}--===`); // eslint-disable-line
+  console.log(`===--Compilation Mode ${modeVariable}--===`); // eslint-disable-line
 
   return {
     context: resolve('src'),
     entry: ['babel-polyfill', './js/clientApp.js'],
-    output: { path: resolve('dist'), filename: '[name].bundle.js' },
+    output: {
+      // path: resolve('dist'),
+      filename: '[name].bundle.js',
+      publicPath: resolve('dist'),
+    },
     stats: { colors: true, reasons: true, chunks: true, errors: true },
     resolve: { extensions: ['.js', '.json'] },
     plugins: [new webpack.HotModuleReplacementPlugin()].concat(
@@ -52,11 +56,7 @@ module.exports = env => {
       ],
     },
     optimization: {
-      splitChunks: {
-        chunks: 'all',
-        automaticNameDelimiter: '-',
-        name: true,
-      },
+      splitChunks: { chunks: 'all', automaticNameDelimiter: '-', name: true },
     },
   };
 };
