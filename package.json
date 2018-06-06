@@ -55,6 +55,7 @@
     "prebuild": "yarn removeDist",
     "build": "webpack -p --env.prod",
     "build:dev": "webpack -d --env.dev",
+    "prestart": "yarn removeDist",
     "start": "NODE_ENV=development node server.js",
     "lint": "eslint src/**/*.{js,jsx}",
     "server": "NODE_ENV=production node server.js"

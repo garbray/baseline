@@ -11,7 +11,7 @@
 // ---------------------------------------
 //     1. Fonts
 // --------------------------------------- */
-
+/* stylelint-disable */
 @font-face {
   font-family: 'EMprint-Bold';
   src: url('/fonts/EMprint-Bold.eot');
@@ -235,3 +235,4 @@
   font-style: italic;
   font-weight: demi;
 }
+/* stylelint-enable */
