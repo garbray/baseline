@@ -14,7 +14,7 @@ module.exports = env => {
       // new BundleAnalyzerPlugin(),
       new webpack.SourceMapDevToolPlugin({
         filename: '[name].js.map',
-        exclude: ['vendor.js']
+        exclude: ['vendor.js'],
       }),
     ];
   }
@@ -52,12 +52,17 @@ module.exports = env => {
           test: /\.css/,
           loaders: [
             { loader: 'style-loader', options: { sourceMap: true } },
-            { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
+            {
+              loader: 'css-loader',
+              options: { importLoaders: 1, sourceMap: true },
+            },
             {
               loader: 'postcss-loader',
               options: {
-                config: { path: './build-scripts/postcss.config.js' },
-                sourceMap: true
+                config: {
+                  path: './build-scripts/postcss.config.js',
+                },
+                sourceMap: true,
               },
             },
           ],

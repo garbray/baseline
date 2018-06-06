@@ -30,5 +30,9 @@ module.exports = () => ({
       mediaQuery: true,
       minPixelValue: 0,
     }),
+    require('cssnano')({
+      preset: 'default',
+      autoprefixer: false,
+    }),
   ],
 });
