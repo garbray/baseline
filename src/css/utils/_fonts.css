@@ -6,8 +6,233 @@
 //
 //     Table of Contents:
 //
-//     1.
+//     1. Fonts
 
 // ---------------------------------------
-//     1.
+//     1. Fonts
 // --------------------------------------- */
+/* stylelint-disable */
+@font-face {
+  font-family: 'EMprint-Bold';
+  src: url('/fonts/EMprint-Bold.eot');
+  src: url('/fonts/EMprint-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/EMprint-Bold.woff2') format('woff2'),
+    url('/fonts/EMprint-Bold.woff') format('woff'),
+    url('/fonts/EMprint-Bold.ttf') format('ttf'),
+    url('/fonts/EMprint-Bold.svg#EMprint-Bold') format('svg');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'EMprint-BoldItalic';
+  src: url('/fonts/EMprint-BoldItalic.eot');
+  src: url('/fonts/EMprint-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/EMprint-BoldItalic.woff2') format('woff2'),
+    url('/fonts/EMprint-BoldItalic.woff') format('woff'),
+    url('/fonts/EMprint-BoldItalic.ttf') format('ttf'),
+    url('/fonts/EMprint-BoldItalic.svg#EMprint-BoldItalic') format('svg');
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'EMprint-CondensedBold';
+  src: url('/fonts/EMprint-CondensedBold.eot');
+  src: url('/fonts/EMprint-CondensedBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-CondensedBold.woff2') format('woff2'),
+    url('/fonts/EMprint-CondensedBold.woff') format('woff'),
+    url('/fonts/EMprint-CondensedBold.ttf') format('ttf'),
+    url('/fonts/EMprint-CondensedBold.svg#EMprint-CondensedBold') format('svg');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'EMprint-CondensedBoldIt';
+  src: url('/fonts/EMprint-CondensedBoldIt.eot');
+  src: url('/fonts/EMprint-CondensedBoldIt.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-CondensedBoldIt.woff2') format('woff2'),
+    url('/fonts/EMprint-CondensedBoldIt.woff') format('woff'),
+    url('/fonts/EMprint-CondensedBoldIt.ttf') format('ttf'),
+    url('/fonts/EMprint-CondensedBoldIt.svg#EMprint-CondensedBoldIt')
+      format('svg');
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'EMprint-CondensedBoldIt';
+  src: url('/fonts/EMprint-CondensedBoldIt.eot');
+  src: url('/fonts/EMprint-CondensedBoldIt.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-CondensedBoldIt.woff2') format('woff2'),
+    url('/fonts/EMprint-CondensedBoldIt.woff') format('woff'),
+    url('/fonts/EMprint-CondensedBoldIt.ttf') format('ttf'),
+    url('/fonts/EMprint-CondensedBoldIt.svg#EMprint-CondensedBoldIt')
+      format('svg');
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'EMprint-CondensedItalic';
+  src: url('/fonts/EMprint-CondensedItalic.eot');
+  src: url('/fonts/EMprint-CondensedItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-CondensedItalic.woff2') format('woff2'),
+    url('/fonts/EMprint-CondensedItalic.woff') format('woff'),
+    url('/fonts/EMprint-CondensedItalic.ttf') format('ttf'),
+    url('/fonts/EMprint-CondensedItalic.svg#EMprint-CondensedItalic')
+      format('svg');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'EMprint-CondensedLight';
+  src: url('/fonts/EMprint-CondensedLight.eot');
+  src: url('/fonts/EMprint-CondensedLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-CondensedLight.woff2') format('woff2'),
+    url('/fonts/EMprint-CondensedLight.woff') format('woff'),
+    url('/fonts/EMprint-CondensedLight.ttf') format('ttf'),
+    url('/fonts/EMprint-CondensedLight.svg#EMprint-CondensedLight')
+      format('svg');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'EMprint-CondensedLightIt';
+  src: url('/fonts/EMprint-CondensedLightIt.eot');
+  src: url('/fonts/EMprint-CondensedLightIt.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-CondensedLightIt.woff2') format('woff2'),
+    url('/fonts/EMprint-CondensedLightIt.woff') format('woff'),
+    url('/fonts/EMprint-CondensedLightIt.ttf') format('ttf'),
+    url('/fonts/EMprint-CondensedLightIt.svg#EMprint-CondensedLightIt')
+      format('svg');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'EMprint-CondensedRegular';
+  src: url('/fonts/EMprint-CondensedRegular.eot');
+  src: url('/fonts/EMprint-CondensedRegular.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-CondensedRegular.woff2') format('woff2'),
+    url('/fonts/EMprint-CondensedRegular.woff') format('woff'),
+    url('/fonts/EMprint-CondensedRegular.ttf') format('ttf'),
+    url('/fonts/EMprint-CondensedRegular.svg#EMprint-CondensedRegular')
+      format('svg');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'EMprint-CondensedSemibold';
+  src: url('/fonts/EMprint-CondensedSemibold.eot');
+  src: url('/fonts/EMprint-CondensedSemibold.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-CondensedSemibold.woff2') format('woff2'),
+    url('/fonts/EMprint-CondensedSemibold.woff') format('woff'),
+    url('/fonts/EMprint-CondensedSemibold.ttf') format('ttf'),
+    url('/fonts/EMprint-CondensedSemibold.svg#EMprint-CondensedSemibold')
+      format('svg');
+  font-style: normal;
+  font-weight: demi;
+}
+
+@font-face {
+  font-family: 'EMprint-CondSemiboldIt';
+  src: url('/fonts/EMprint-CondSemiboldIt.eot');
+  src: url('/fonts/EMprint-CondSemiboldIt.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-CondSemiboldIt.woff2') format('woff2'),
+    url('/fonts/EMprint-CondSemiboldIt.woff') format('woff'),
+    url('/fonts/EMprint-CondSemiboldIt.ttf') format('ttf'),
+    url('/fonts/EMprint-CondSemiboldIt.svg#EMprint-CondSemiboldIt')
+      format('svg');
+  font-style: italic;
+  font-weight: demi;
+}
+
+@font-face {
+  font-family: 'EMprint-Light';
+  src: url('/fonts/EMprint-Light.eot');
+  src: url('/fonts/EMprint-Light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/EMprint-Light.woff2') format('woff2'),
+    url('/fonts/EMprint-Light.woff') format('woff'),
+    url('/fonts/EMprint-Light.ttf') format('ttf'),
+    url('/fonts/EMprint-Light.svg#EMprint-Light') format('svg');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'EMprint-LightItalic';
+  src: url('/fonts/EMprint-LightItalic.eot');
+  src: url('/fonts/EMprint-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/EMprint-LightItalic.woff2') format('woff2'),
+    url('/fonts/EMprint-LightItalic.woff') format('woff'),
+    url('/fonts/EMprint-LightItalic.ttf') format('ttf'),
+    url('/fonts/EMprint-LightItalic.svg#EMprint-LightItalic') format('svg');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'EMprint-Regular';
+  src: url('/fonts/EMprint-Regular.eot');
+  src: url('/fonts/EMprint-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/EMprint-Regular.woff2') format('woff2'),
+    url('/fonts/EMprint-Regular.woff') format('woff'),
+    url('/fonts/EMprint-Regular.ttf') format('ttf'),
+    url('/fonts/EMprint-Regular.svg#EMprint-Regular') format('svg');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'EMprint-RegularItalic';
+  src: url('/fonts/EMprint-RegularItalic.eot');
+  src: url('/fonts/EMprint-RegularItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-RegularItalic.woff2') format('woff2'),
+    url('/fonts/EMprint-RegularItalic.woff') format('woff'),
+    url('/fonts/EMprint-RegularItalic.ttf') format('ttf'),
+    url('/fonts/EMprint-RegularItalic.svg#EMprint-RegularItalic') format('svg');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'EMprint-Semibold';
+  src: url('/fonts/EMprint-Semibold.eot');
+  src: url('/fonts/EMprint-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/EMprint-Semibold.woff2') format('woff2'),
+    url('/fonts/EMprint-Semibold.woff') format('woff'),
+    url('/fonts/EMprint-Semibold.ttf') format('ttf'),
+    url('/fonts/EMprint-Semibold.svg#EMprint-Semibold') format('svg');
+  font-style: normal;
+  font-weight: demi;
+}
+
+@font-face {
+  font-family: 'EMprint-SemiboldItalic';
+  src: url('/fonts/EMprint-SemiboldItalic.eot');
+  src: url('/fonts/EMprint-SemiboldItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('/fonts/EMprint-SemiboldItalic.woff2') format('woff2'),
+    url('/fonts/EMprint-SemiboldItalic.woff') format('woff'),
+    url('/fonts/EMprint-SemiboldItalic.ttf') format('ttf'),
+    url('/fonts/EMprint-SemiboldItalic.svg#EMprint-SemiboldItalic')
+      format('svg');
+  font-style: italic;
+  font-weight: demi;
+}
+/* stylelint-enable */
