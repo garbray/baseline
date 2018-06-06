@@ -16,15 +16,20 @@ h1,
 h2,
 h3,
 h4 {
+  color: var(--ex-black);
   margin: 0;
+
   span {
     font-family: inherit;
   }
 }
 
 h1 {
-  font-size: responsive 12px 21px; /* min-size, max-size */
-  font-range: 320px 1025px; /* viewport widths between which font-size is fluid */
+  /* font-size: responsive 40px 70px;
+  font-range: 320px 1025px;
+  line-height: responsive 46px 80px;
+  line-height-range: 320px 1025px; */
+  @mixin font-scale 40px, 70px, 46px, 80px;
 }
 
 h2 {

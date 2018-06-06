@@ -2,9 +2,16 @@ const pkg = require('../package.json');
 
 module.exports = () => ({
   plugins: [
+    // Auto adds defined files to all css files.  i.e. variables and mixins
+    // https://www.npmjs.com/package/postcss-prepend-imports
+    require('postcss-prepend-imports')({
+      path: './src/css',
+      files: ['utils/utils.css'],
+    }),
     // Transfer @import rule by inlining content, e.g. @import 'normalize.css'
     // https://github.com/postcss/postcss-import
     require('postcss-import')(),
+    require('postcss-mixins')(),
     require('stylelint')(),
     require('rucksack-css')({ autoprefixer: false }),
     require('postcss-cssnext')(),

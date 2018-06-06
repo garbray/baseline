@@ -6,7 +6,10 @@
 //
 //     Table of Contents:
 //
-//     1. Fonts
+
+//     1.
+//     2. Media queries
+//     3. Font scale
 
 // ---------------------------------------
 //     1. Fonts
@@ -106,4 +109,24 @@
   font-family: 'EMprint-SemiboldItalic', Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: demi;
+}
+
+/* ---------------------------------------
+//     2. Media queries
+// --------------------------------------- */
+/* @custom-media --phone (width >= 0) and (width <= $screen-sm-max);
+@custom-media --phone-large (width >= $screen-xs) and (width <= $screen-sm-max);
+@custom-media --tablet (width >= $screen-sm) and (width <= $screen-md);
+@custom-media --desktop (min-width: $screen-lg);
+@custom-media --desktop-large (min-width: $screen-xl); */
+
+/* ---------------------------------------
+//     3. Font scale
+// --------------------------------------- */
+
+@define-mixin font-scale $fz-small, $fz-large, $lh-small, $lh-large {
+  font-size: responsive $fz-small $fz-large; /* min-size, max-size */
+  font-range: 320px 1025px; /* viewport widths between which font-size is fluid */
+  line-height: responsive $lh-small $lh-large;
+  line-height-range: 320px 1025px;
 }
