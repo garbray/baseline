@@ -1,4 +1,4 @@
-// File:           _text.scss
+/* File:           _text.scss
 // Description:    Site-wide text styles
 //
 //         ◡◠ ✥ ◠◡
@@ -10,7 +10,7 @@
 
 // ---------------------------------------
 //     1. Text
-// ---------------------------------------
+// -------------------------------------- */
 
 h1,
 h2,
@@ -23,6 +23,8 @@ h4 {
 }
 
 h1 {
+  font-size: responsive 12px 21px; /* min-size, max-size */
+  font-range: 320px 1025px; /* viewport widths between which font-size is fluid */
 }
 
 h2 {
