@@ -64,20 +64,6 @@
 }
 
 @font-face {
-  font-family: 'EMprint-CondensedBoldIt';
-  src: url('/fonts/EMprint-CondensedBoldIt.eot');
-  src: url('/fonts/EMprint-CondensedBoldIt.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/EMprint-CondensedBoldIt.woff2') format('woff2'),
-    url('/fonts/EMprint-CondensedBoldIt.woff') format('woff'),
-    url('/fonts/EMprint-CondensedBoldIt.ttf') format('ttf'),
-    url('/fonts/EMprint-CondensedBoldIt.svg#EMprint-CondensedBoldIt')
-      format('svg');
-  font-style: italic;
-  font-weight: 700;
-}
-
-@font-face {
   font-family: 'EMprint-CondensedItalic';
   src: url('/fonts/EMprint-CondensedItalic.eot');
   src: url('/fonts/EMprint-CondensedItalic.eot?#iefix')

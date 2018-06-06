@@ -3,7 +3,8 @@
 /* Main styles */
 html {
   background: var(--ex-blue);
-  font-family: 'EMprint-CondensedRegular';
+
+  @mixin emprint-reg;
 
   @media (width >= 500px) and (width <= 1200px) {
     background: var(--ex-blue);

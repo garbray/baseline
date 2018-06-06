@@ -6,8 +6,104 @@
 //
 //     Table of Contents:
 //
-//     1.
+//     1. Fonts
 
 // ---------------------------------------
-//     1.
+//     1. Fonts
 // --------------------------------------- */
+
+@define-mixin emprint-bold {
+  font-family: 'EMprint-Bold', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@define-mixin emprint-bold-it {
+  font-family: 'EMprint-BoldItalic', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+@define-mixin emprint-condensed-bold {
+  font-family: 'EMprint-CondensedBold', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@define-mixin emprint-condensed-bold-it {
+  font-family: 'EMprint-CondensedBoldIt', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+@define-mixin emprint-condensed-it {
+  font-family: 'EMprint-CondensedItalic', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+@define-mixin emprint-condensed-lgt {
+  font-family: 'EMprint-CondensedLight', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@define-mixin emprint-condensed-lgt-it {
+  font-family: 'EMprint-CondensedLightIt', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+@define-mixin emprint-condensed-reg {
+  font-family: 'EMprint-CondensedRegular', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@define-mixin emprint-condensed-semi-bold {
+  font-family: 'EMprint-CondensedSemibold', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: demi;
+}
+
+@define-mixin emprint-condensed-semi-bold-it {
+  font-family: 'EMprint-CondSemiboldIt', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: demi;
+}
+
+@define-mixin emprint-lgt {
+  font-family: 'EMprint-Light', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@define-mixin emprint-lgt-it {
+  font-family: 'EMprint-LightItalic', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+@define-mixin emprint-reg {
+  font-family: 'EMprint-Regular', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@define-mixin emprint-reg-it {
+  font-family: 'EMprint-RegularItalic', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+@define-mixin emprint-semi-bold {
+  font-family: 'EMprint-Semibold', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: demi;
+}
+
+@define-mixin emprint-semi-bold-it {
+  font-family: 'EMprint-SemiboldItalic', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: demi;
+}
