@@ -6,6 +6,7 @@ module.exports = () => ({
     // https://github.com/postcss/postcss-import
     require('postcss-import')(),
     require('stylelint')(),
+    require('rucksack-css')({ autoprefixer: false }),
     require('postcss-cssnext')(),
     // Allows nested media queries and compresses all breakpoints into one media query per file
     // https://github.com/hail2u/node-css-mqpacker
