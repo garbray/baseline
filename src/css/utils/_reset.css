@@ -39,6 +39,8 @@ html {
   cursor: default; /* 2 */
 }
 
+/* remove margin and padding */
+
 body {
   margin: 0;
   padding: 0;
@@ -58,14 +60,6 @@ header,
 nav,
 section {
   display: block;
-}
-
-/**
- * Remove the margin in all browsers (opinionated).
- */
-
-body {
-  margin: 0;
 }
 
 /**
@@ -145,26 +139,6 @@ a {
 }
 
 /**
- * 1. Remove the bottom border in Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
-abbr[title] {
-  border-bottom: 0; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
-
-b,
-strong {
-  font-weight: inherit;
-}
-
-/**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 
@@ -223,9 +197,13 @@ sup {
   vertical-align: baseline;
 }
 
+/* move down the sub tag */
+
 sub {
   bottom: -0.25em;
 }
+
+/* move up the sub tag */
 
 sup {
   top: -0.5em;
@@ -241,6 +219,8 @@ sup {
   color: #000000; /* 1 */
   text-shadow: none;
 }
+
+/* default selection  */
 
 ::selection {
   background-color: #b3d4fc; /* 1 */
@@ -375,9 +355,9 @@ select {
  */
 
 button,
-html [type="button"], /* 1 */
-[type="reset"],
-[type="submit"] {
+html [type='button'], /* 1 */
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button; /* 2 */
 }
 

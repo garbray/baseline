@@ -1,12 +1,13 @@
 :root {
-  // main colors
+  /* main colors */
   --ex-red: #fe000c;
   --ex-blue: #0c479d;
   --ex-el-red: #d5000a;
   --ex-el-blue: #2369bd;
   --ex-el-light-blue: #3c89e5;
-  // black
-  --ex-black: #333;
+
+  /* black */
+  --ex-black: #333333;
   --ex-black-100: #5a5a5a;
   --ex-black-200: #6d6e71;
   --ex-black-300: #939598;
@@ -14,7 +15,8 @@
   --ex-black-500: #d1d3d4;
   --ex-black-600: #e6e7e8;
   --ex-black-700: #f1f2f2;
-  // accent
+
+  /* accent */
   --ex-accent-red: #990e29;
   --ex-accent-orange: #f95421;
   --ex-accent-orange-100: #fc7e00;

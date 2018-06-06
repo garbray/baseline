@@ -1,6 +1,7 @@
 @import '/utils/_variables.css';
 @import '/utils/_reset.css';
 
+/* Main styles */
 html {
   background: var(--ex-blue);
 
