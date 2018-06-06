@@ -2,10 +2,10 @@
 @import '/utils/_reset.css';
 
 /* Main styles */
-html {
+/* html {
   background: var(--ex-blue);
 
   @media (width >= 500px) and (width <= 1200px) {
     background: var(--ex-blue);
   }
-}
+} */

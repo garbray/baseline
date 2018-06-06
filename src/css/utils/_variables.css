@@ -1,5 +1,31 @@
 :root {
-  /* main colors */
+  /**
+  * Basic container width of 90% the view width.
+  */
+  --container-width: 90vw;
+
+  /**
+   * Container maxs out at 1080px.
+   */
+  --max-content-width: 1080px;
+
+  /**
+   * Basic gutter sizing.  Elements are spaced horizontally by 30px.
+   */
+  --gutter: 30px;
+
+  /*
+   * Media queries breakpoints
+   * ======================================================================== */
+
+  --screen-xs: 480px; /* Extra small screen / phone */
+  --screen-sm: 768px; /* Small screen / tablet */
+  --screen-lg: 1024px; /* Large screen /  desktop */
+  --screen-xl: 1440px; /* Extra Large screen / wide desktop */
+
+  /*
+   * Colors
+   * ======================================================================== */
   --ex-red: #fe000c;
   --ex-blue: #0c479d;
   --ex-el-red: #d5000a;
@@ -33,4 +59,15 @@
   --ex-accent-red-violet: #bd2f7f;
   --ex-accent-violet: #890c58;
   --ex-accent-cabaret: #d73872;
+
+  /*
+   * Layers
+   * ======================================================================== */
+  --z-base: 0;
+  --z-mid: 10;
+  --z-high: 100;
+  --z-sticky-nav: 500;
+  --z-super: 1000;
+  --z-nav: 2000;
+  --z-modal: 3000;
 }
