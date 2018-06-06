@@ -2,6 +2,8 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = env => {
   let modeVariable = 'production';
@@ -13,6 +15,8 @@ module.exports = env => {
       new webpack.NamedModulesPlugin(),
       // new webpack.HotModuleReplacementPlugin(),
       // new BundleAnalyzerPlugin(),
+      new FriendlyErrorsWebpackPlugin(),
+      new ProgressBarPlugin(),
       new webpack.SourceMapDevToolPlugin({
         filename: '[name].js.map',
         exclude: ['vendor.js'],

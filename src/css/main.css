@@ -1,10 +1,11 @@
 @import '/utils/utils.css';
 
 /* Main styles */
-/* html {
+html {
   background: var(--ex-blue);
+  font-family: 'EMprint-CondensedRegular';
 
   @media (width >= 500px) and (width <= 1200px) {
     background: var(--ex-blue);
   }
-} */
+}
