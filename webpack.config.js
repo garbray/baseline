@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = env => {
   let modeVariable = 'production';
@@ -16,6 +17,10 @@ module.exports = env => {
         filename: '[name].js.map',
         exclude: ['vendor.js'],
       }),
+      new CopyWebpackPlugin([
+        { from: 'img', to: 'img' },
+        { from: 'fonts', to: 'fonts' },
+      ], { ignore: ['.DS_Store'] })
     ];
   }
 
