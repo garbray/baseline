@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.main {
+  &-nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    &-content {
+      height: 100%;
+      overflow: scroll;
+    }
+  }
+
+  &-content {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+._hidden {
+  display: none;
+}
+
+// Resolving issue with editor mode for absolute elements
+.edition-mode {
+  .page-wrapper {
+    position: relative;
+  }
+}
+
+.img-constrainer {
+  height: auto;
+  width: 100%;
+}
+
+.container {
+  @mixin flexgrid;
+  margin: 0 auto;
+  max-width: var(--max-content-width);
+  width: var(--container-width);
+
+  &--full-bleed {
+    margin: 0;
+    max-width: 100%;
+  }
+}

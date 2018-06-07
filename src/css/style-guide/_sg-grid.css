@@ -1,0 +1,107 @@
+/* File:           _sg-grid.scss
+// Description:    styleguide Grid helper layout
+//
+//         ◡◠ ✥ ◠◡
+//
+//     Table of Contents:
+//
+//     1. General
+//     2. Overlay styles
+//     3. Responsive
+
+// ---------------------------------------
+//     1. General
+// --------------------------------------- */
+
+.grid {
+  @mixin flexgrid;
+  height: 100%;
+  margin-top: 20px;
+
+  &__section {
+    height: 400px;
+
+    &.large-grid {
+      display: none;
+    }
+  }
+
+  &__cell {
+    background-color: var(--ex-red);
+    opacity: 0.2;
+
+    /* @for $i from 1 through $total-columns {
+    //   &-#{$i} {
+    //     @include flexcolumn($i);
+    //     height: 100%;
+    //   }
+    // } */
+  }
+
+  /* &__inner {
+  //   background: $color-aqr-background-gray;
+  //   height: 100%;
+  // }
+
+  // &__container {
+  //   background: $color-aqr-dark-blue;
+  //   z-index: 11;
+
+  //   /* ---------------------------------------
+  //   //     2. Overlay styles
+  //   // ---------------------------------------
+  //   &.hide {
+  //     display: none;
+  //   }
+
+  //   &.overlay {
+  //     background: rgba(1, 33, 105, 0.2);
+  //     display: block;
+  //     height: 100vh;
+  //     left: 0;
+  //     position: absolute;
+  //     top: 0;
+  //     width: 100%;
+
+  //     .container {
+  //       height: 100%;
+  //     }
+
+  //     .grid {
+  //       height: 100%;
+  //       margin-top: 0;
+
+  //       &__section {
+  //         height: 100%;
+  //         position: sticky;
+  //       }
+
+  //       &__cell {
+  //         background: rgba(0, 159, 223, 0.2);
+  //       }
+
+  //       &__inner {
+  //         background: rgba(245, 245, 245, 0.2);
+  //       }
+  //     }
+
+  //   }
+
+  // }
+
+  /* ---------------------------------------
+  //     3. Responsive
+  // ---------------------------------------
+
+  // @include at-breakpoint($large-screen) {
+  //   &__section {
+
+  //     &.large-grid {
+  //       display: block;
+  //     }
+  //     &.small-grid {
+  //       display: none;
+  //     }
+  //   }
+  // } */
+}
