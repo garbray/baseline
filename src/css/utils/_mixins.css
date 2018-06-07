@@ -126,12 +126,39 @@
 
 @define-mixin font-scale $fz-small, $fz-large, $lh-small, $lh-large {
   font-size: responsive $fz-small $fz-large; /* min-size, max-size */
-  font-range: 320px 1025px; /* viewport widths between which font-size is fluid */
+  font-range: 480px 1025px; /* viewport widths between which font-size is fluid */
   line-height: responsive $lh-small $lh-large;
-  line-height-range: 320px 1025px;
+  line-height-range: 480px 1025px;
 }
 
 @define-mixin letter-spacing $ls-small, $ls-large {
   letter-spacing: responsive $ls-small $ls-large;
-  letter-spacing-range: 320px 1025px;
+  letter-spacing-range: 480px 1025px;
+}
+
+/* ---------------------------------------
+//     4. Grid / Column
+// ---------------------------------------
+
+// ---------------------------------------
+//     4.1 flexbox columns columns
+// --------------------------------------- */
+
+@define-mixin flexgrid $direction: row, $flow: wrap, $align: initial,
+  $justfity: initial, $container-width: $max-width {
+  align-items: $align;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: $direction;
+  flex-flow: $flow;
+  justify-content: $justfity;
+  max-width: $container-width;
+}
+
+@define-mixin flexcolumn $columns, $total-columns: 12, $gutter: $gutter-width {
+  flex: $columns $columns auto;
+  flex-basis: $columns;
+  flex-grow: 1;
+  max-width: (100 / ($total-columns / $columns)) * 1%;
+  padding: 0 $gutter / 2;
 }
