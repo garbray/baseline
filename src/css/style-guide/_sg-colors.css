@@ -1,0 +1,41 @@
+/* File:           _sg-colors.scss
+// Description:    Style guide colors
+//
+//
+//         ◡◠ ✥ ◠◡
+//
+//     Table of Contents:
+//
+//     1. Color boxes
+
+// ---------------------------------------
+//     1. Color boxes
+// --------------------------------------- */
+
+.colors {
+  display: flex;
+}
+
+.color-palette {
+  padding: 10px;
+}
+
+.colorbox {
+  width: 100px;
+  height: 100px;
+  display: block;
+
+  &--red {
+    background-color: var(--ex-red);
+  }
+
+  &--blue {
+    background-color: var(--ex-blue);
+  }
+}
+
+p.colorname {
+  display: block;
+  color: var(--ex-black);
+  padding-bottom: 0;
+}
