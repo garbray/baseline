@@ -130,3 +130,8 @@
   line-height: responsive $lh-small $lh-large;
   line-height-range: 320px 1025px;
 }
+
+@define-mixin letter-spacing $ls-small, $ls-large {
+  letter-spacing: responsive $ls-small $ls-large;
+  letter-spacing-range: 320px 1025px;
+}

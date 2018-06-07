@@ -1,6 +1,5 @@
-import styles from '../css/main.css';
-
-console.log('ok', styles); // eslint-disable-line
+import styles from '../css/main.css'; // eslint-disable-line
+import sg from '../css/style-guide/style-guide.css'; // eslint-disable-line
 
 class App {
   constructor(html) {

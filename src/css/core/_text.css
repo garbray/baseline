@@ -15,40 +15,104 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6,
+p {
   color: var(--ex-black);
   margin: 0;
 
   span {
     font-family: inherit;
   }
+  &.text-white {
+    color: var(--ex-white);
+  }
+
+  &.text-disable {
+    color: var(--ex-black-200);
+  }
 }
 
 h1 {
-  /* font-size: responsive 40px 70px;
-  font-range: 320px 1025px;
-  line-height: responsive 46px 80px;
-  line-height-range: 320px 1025px; */
   @mixin font-scale 40px, 70px, 46px, 80px;
+  @mixin emprint-lgt;
+  @mixin letter-spacing -0.1px, -0.5px;
 }
 
 h2 {
+  @mixin font-scale 34px, 48px, 44px, 64px;
+  @mixin emprint-lgt;
+  @mixin letter-spacing -0.1px, -0.5px;
 }
 
 h3 {
+  @mixin font-scale 28px, 34px, 36px, 44px;
+  @mixin emprint-lgt;
+  letter-spacing: -0.5px;
 }
 
 h4 {
+  @mixin emprint-reg;
+  font-size: 24px;
+  line-height: 36px;
 }
 
 h5 {
+  @mixin emprint-reg;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 h6 {
+  @mixin emprint-semi-bold;
+  font-size: 16px;
+  line-height: 28px;
 }
 
 p {
+  @mixin emprint-reg;
+  font-size: 16px;
+  line-height: 28px;
+  padding-bottom: 20px;
+
+  .text-small {
+    @mixin emprint-reg;
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 14px;
+  }
 }
 
-.text--small {
+.eyebrow {
+  @mixin emprint-semi-bold;
+  color: var(--ex-black);
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1px;
+
+  &-red {
+    color: var(--ex-red);
+  }
+}
+
+.caption,
+.info {
+  @mixin emprint-semi-bold;
+  font-size: 13px;
+  line-height: 20px;
+
+  &-color: var(--ex-black-200);
+}
+
+.caption {
+  &-regular {
+    @mixin emprint-reg;
+  }
+}
+
+.info {
+  &-italic {
+    @mixin emprint-reg-it;
+  }
 }
