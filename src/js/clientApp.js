@@ -3,8 +3,7 @@ import sg from '../css/style-guide/style-guide.css'; // eslint-disable-line
 
 class App {
   constructor() {
-    this.modules = ;
-    console.log(html); // eslint-disable-line
+    this.modules = '';
   }
 
   init() {
