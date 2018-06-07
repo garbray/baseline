@@ -126,12 +126,12 @@
 
 @define-mixin font-scale $fz-small, $fz-large, $lh-small, $lh-large {
   font-size: responsive $fz-small $fz-large; /* min-size, max-size */
-  font-range: 320px 1025px; /* viewport widths between which font-size is fluid */
+  font-range: 480px 1025px; /* viewport widths between which font-size is fluid */
   line-height: responsive $lh-small $lh-large;
-  line-height-range: 320px 1025px;
+  line-height-range: 480px 1025px;
 }
 
 @define-mixin letter-spacing $ls-small, $ls-large {
   letter-spacing: responsive $ls-small $ls-large;
-  letter-spacing-range: 320px 1025px;
+  letter-spacing-range: 480px 1025px;
 }
