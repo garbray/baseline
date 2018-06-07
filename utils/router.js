@@ -6,5 +6,9 @@ module.exports = app => {
   // Colors Page
   app.get('/colors', (req, res) => {
     res.render('pages/sg-colors.html');
-  })
-}
+  });
+  // Colors Page
+  app.get('/grid', (req, res) => {
+    res.render('pages/sg-grid.html');
+  });
+};

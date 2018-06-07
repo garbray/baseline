@@ -43,8 +43,8 @@ export function log(...text) {
 }
 
 /**
- * detect the device based on screensize
- * @return {String} return the divice based on the screensize
+ * detect the device based on screen size
+ * @return {String} return the device based on the screen size
  */
 export function deviceDetection() {
   const viewportWidth = window.innerWidth;

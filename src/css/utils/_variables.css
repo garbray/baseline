@@ -7,7 +7,7 @@
   /**
    * Container maxs out at 1080px.
    */
-  --max-content-width: 1080px;
+  --max-content-width: 1920px;
 
   /**
    * Basic gutter sizing.  Elements are spaced horizontally by 30px.
