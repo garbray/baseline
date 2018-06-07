@@ -25,12 +25,60 @@
   height: 100px;
   display: block;
 
+  /*
+   * Colors
+   * ======================================================================== */
   &--red {
     background-color: var(--ex-red);
   }
 
   &--blue {
     background-color: var(--ex-blue);
+  }
+
+  &--el-red {
+    background-color: var(--ex-el-red);
+  }
+
+  &--el-blue {
+    background-color: var(--ex-el-blue);
+  }
+
+  &--el-light-blue {
+    background-color: var(--ex-el-light-blue);
+  }
+
+  /* black */
+  &--black {
+    background-color: var(--ex-black);
+  }
+
+  &--black-100 {
+    background-color: var(--ex-black-100);
+  }
+
+  &--black-200 {
+    background-color: var(--ex-black-200);
+  }
+
+  &--black-300 {
+    background-color: var(--ex-black-300);
+  }
+
+  &--black-400 {
+    background-color: var(--ex-black-400);
+  }
+
+  &--black-500 {
+    background-color: var(--ex-black-500);
+  }
+
+  &--black-600 {
+    background-color: var(--ex-black-600);
+  }
+
+  &--black-700 {
+    background-color: var(--ex-black-700);
   }
 }
 
