@@ -14,6 +14,7 @@ const webpackConfig = require('./webpack.config')({
 });
 const bs = browserSync.create();
 const port = 8000;
+const router = require('./utils/router');
 
 nunjucks.configure(`${__dirname}/src/templates`, {
   autoescape: true,
@@ -37,9 +38,10 @@ if (isDevelopment) {
 // output static files
 app.use('/', express.static('./dist'));
 
-app.get('/', (req, res) => {
-  res.render('pages/index.html');
-});
+// app.get('/', (req, res) => {
+//   res.render('pages/index.html');
+// });
+router(app);
 
 app.listen(port, () => {
   console.log('server listen 3000 port'); // eslint-disable-line
