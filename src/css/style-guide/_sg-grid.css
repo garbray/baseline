@@ -14,8 +14,6 @@
 // --------------------------------------- */
 
 .grid {
-  margin-top: 20px;
-
   &--section {
     height: 400px;
 
@@ -44,56 +42,34 @@
     height: 100%;
   }
 
-  /* &__inner {
-  //   background: $color-aqr-background-gray;
-  //   height: 100%;
-  // }
+  /* ---------------------------------------
+      2. Overlay styles
+  // --------------------------------------- */
+  &-hide {
+    display: none;
+  }
 
-  // &__container {
-  //   background: $color-aqr-dark-blue;
-  //   z-index: 11;
+  &-overlay {
+    background: rgba(1, 33, 105, 0.2);
+    display: block;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
 
-  //   /* ---------------------------------------
-  //   //     2. Overlay styles
-  //   // ---------------------------------------
-  //   &.hide {
-  //     display: none;
-  //   }
+    .grid {
+      &--section {
+        height: 100%;
+        margin-top: 0;
+        position: sticky;
+      }
 
-  //   &.overlay {
-  //     background: rgba(1, 33, 105, 0.2);
-  //     display: block;
-  //     height: 100vh;
-  //     left: 0;
-  //     position: absolute;
-  //     top: 0;
-  //     width: 100%;
-
-  //     .container {
-  //       height: 100%;
-  //     }
-
-  //     .grid {
-  //       height: 100%;
-  //       margin-top: 0;
-
-  //       &__section {
-  //         height: 100%;
-  //         position: sticky;
-  //       }
-
-  //       &__cell {
-  //         background: rgba(0, 159, 223, 0.2);
-  //       }
-
-  //       &__inner {
-  //         background: rgba(245, 245, 245, 0.2);
-  //       }
-  //     }
-
-  //   }
-
-  // }
+      &--cell {
+        background: transparent;
+      }
+    }
+  }
 
   /* ---------------------------------------
   //     3. Responsive

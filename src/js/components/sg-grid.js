@@ -17,7 +17,7 @@ export default class helper {
     this.html.style.height = `${windowHeight}px`;
 
     if (event.keyCode === 68) {
-      toggleClass(this.html, 'overlay');
+      toggleClass(this.html, 'grid-overlay');
     }
   }
 }
