@@ -42,6 +42,12 @@ export function log(...text) {
   console.log(...text); //eslint-disable-line
 }
 
+export function forEach(list, cb) {
+  for (let index = 0, len = list.length; index < len; index += 1) {
+    cb(list[index], index);
+  }
+}
+
 /**
  * detect the device based on screen size
  * @return {String} return the device based on the screen size

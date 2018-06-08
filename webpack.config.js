@@ -21,10 +21,10 @@ module.exports = env => {
         filename: '[name].js.map',
         exclude: ['vendor.js'],
       }),
-      new CopyWebpackPlugin([
-        { from: 'img', to: 'img' },
-        { from: 'fonts', to: 'fonts' },
-      ], { ignore: ['.DS_Store'] })
+      new CopyWebpackPlugin(
+        [{ from: 'img', to: 'img' }, { from: 'fonts', to: 'fonts' }],
+        { ignore: ['.DS_Store'] },
+      ),
     ];
   }
 
@@ -38,12 +38,12 @@ module.exports = env => {
       'webpack-hot-middleware/client',
     ],
     output: {
-      // path: resolve('dist'),
+      path: resolve('dist'),
       filename: '[name].bundle.js',
-      publicPath: resolve('dist'),
+      // publicPath: resolve('dist'),
+      chunkFilename: '[name].bundle.js',
     },
-    stats: { colors: true, reasons: true, chunks: true, errors: true },
-    resolve: { extensions: ['.js', '.json'] },
+    stats: { colors: true, reasons: true, chunks: true, errors: true }, // resolve: { extensions: ['.js', '.json'] },
     plugins: [new webpack.HotModuleReplacementPlugin()].concat(
       developmentPlugins,
     ),
@@ -68,9 +68,7 @@ module.exports = env => {
             {
               loader: 'postcss-loader',
               options: {
-                config: {
-                  path: './build-scripts/postcss.config.js',
-                },
+                config: { path: './build-scripts/postcss.config.js' },
                 sourceMap: true,
               },
             },
