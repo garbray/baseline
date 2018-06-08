@@ -1,0 +1,25 @@
+/* File:           _sg-typography.scss
+// Description:    Typography
+//
+//
+//         ◡◠ ✥ ◠◡
+//
+//     Table of Contents:
+//
+//     1.
+
+// ---------------------------------------
+//     1.
+// --------------------------------------- */
+
+.sg-typography {
+  display: flex;
+}
+
+.sg-text-helper {
+  color: var(--ex-black-400);
+  display: block;
+  padding-top: 10px;
+
+  @mixin emprint-semi-bold;
+}
