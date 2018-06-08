@@ -7,17 +7,18 @@ class App {
 
     forEach(this.modules, el => {
       const moduleName = el.getAttribute('data-script');
-      const module = el;
+      const html = el;
 
-      if (!module.getAttribute('data-loaded')) {
+      if (!html.getAttribute('data-loaded')) {
         try {
           // loadModule
           // eslint-disable-next-line
           System.import(
-            /* webpackChunkName: "sg-grid" */ './components/sg-grid',
+            /* webpackChunkName: "sg-grid" */ `./components/${moduleName}`,
           ).then(Module => {
             const component = Module.default;
-            component();
+
+            new component(html); // eslint-disable-line
           });
         } catch (e) {
           console.log(moduleName, e); // eslint-disable-line
