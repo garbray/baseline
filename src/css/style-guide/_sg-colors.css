@@ -12,74 +12,63 @@
 //     1. Color boxes
 // --------------------------------------- */
 
-.colors {
-  display: flex;
+@define-mixin bg-colorbox $color {
+  &$(color) {
+    background-color: var($color);
+  }
 }
 
 .color-palette {
   padding: 10px;
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .colorbox {
   width: 100px;
   height: 100px;
   display: block;
+  margin-bottom: 10px;
 
   /*
    * Colors
    * ======================================================================== */
-  &--red {
-    background-color: var(--ex-red);
-  }
-
-  &--blue {
-    background-color: var(--ex-blue);
-  }
-
-  &--el-red {
-    background-color: var(--ex-el-red);
-  }
-
-  &--el-blue {
-    background-color: var(--ex-el-blue);
-  }
-
-  &--el-light-blue {
-    background-color: var(--ex-el-light-blue);
-  }
+  @mixin bg-colorbox --ex-red;
+  @mixin bg-colorbox --ex-blue;
+  @mixin bg-colorbox --ex-el-red;
+  @mixin bg-colorbox --ex-el-blue;
+  @mixin bg-colorbox --ex-el-light-blue;
 
   /* black */
-  &--black {
-    background-color: var(--ex-black);
-  }
+  @mixin bg-colorbox --ex-black;
+  @mixin bg-colorbox --ex-black-100;
+  @mixin bg-colorbox --ex-black-200;
+  @mixin bg-colorbox --ex-black-300;
+  @mixin bg-colorbox --ex-black-400;
+  @mixin bg-colorbox --ex-black-500;
+  @mixin bg-colorbox --ex-black-600;
+  @mixin bg-colorbox --ex-black-700;
+  @mixin bg-colorbox --ex-white;
 
-  &--black-100 {
-    background-color: var(--ex-black-100);
-  }
+  /* accent */
+  @mixin bg-colorbox --ex-accent-red;
+  @mixin bg-colorbox --ex-accent-orange;
+  @mixin bg-colorbox --ex-accent-orange-100;
+  @mixin bg-colorbox --ex-accent-orange-200;
+  @mixin bg-colorbox --ex-accent-yellow;
+  @mixin bg-colorbox --ex-accent-lemon;
+  @mixin bg-colorbox --ex-accent-green;
+  @mixin bg-colorbox --ex-accent-aqua;
+  @mixin bg-colorbox --ex-accent-ocean;
+  @mixin bg-colorbox --ex-accent-sky;
+  @mixin bg-colorbox --ex-accent-blue;
+  @mixin bg-colorbox --ex-accent-blue-100;
+  @mixin bg-colorbox --ex-accent-affair;
+  @mixin bg-colorbox --ex-accent-red-violet;
+  @mixin bg-colorbox --ex-accent-violet;
+  @mixin bg-colorbox --ex-accent-cabaret;
 
-  &--black-200 {
-    background-color: var(--ex-black-200);
-  }
-
-  &--black-300 {
-    background-color: var(--ex-black-300);
-  }
-
-  &--black-400 {
-    background-color: var(--ex-black-400);
-  }
-
-  &--black-500 {
-    background-color: var(--ex-black-500);
-  }
-
-  &--black-600 {
-    background-color: var(--ex-black-600);
-  }
-
-  &--black-700 {
-    background-color: var(--ex-black-700);
-  }
 }
 
 p.colorname {
