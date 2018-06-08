@@ -14,11 +14,9 @@
 // --------------------------------------- */
 
 .grid {
-  @mixin flexgrid;
-  height: 100%;
   margin-top: 20px;
 
-  &__section {
+  &--section {
     height: 400px;
 
     &.large-grid {
@@ -26,16 +24,24 @@
     }
   }
 
-  &__cell {
+  &--cell {
+    background-color: var(--ex-white);
+  }
+
+  &--inner {
     background-color: var(--ex-red);
     opacity: 0.2;
+    height: 100%;
+  }
 
-    /* @for $i from 1 through $total-columns {
-    //   &-#{$i} {
-    //     @include flexcolumn($i);
-    //     height: 100%;
-    //   }
-    // } */
+  &--14 {
+    @mixin flexcolumn 1;
+    height: 100%;
+  }
+
+  &--6 {
+    @mixin flexcolumn 1, 6;
+    height: 100%;
   }
 
   /* &__inner {
@@ -91,17 +97,16 @@
 
   /* ---------------------------------------
   //     3. Responsive
-  // ---------------------------------------
+  // --------------------------------------- */
 
-  // @include at-breakpoint($large-screen) {
-  //   &__section {
-
-  //     &.large-grid {
-  //       display: block;
-  //     }
-  //     &.small-grid {
-  //       display: none;
-  //     }
-  //   }
-  // } */
+  @media (--tablet-min) {
+    &--section {
+      &.large-grid {
+        display: flex;
+      }
+      &.small-grid {
+        display: none;
+      }
+    }
+  }
 }

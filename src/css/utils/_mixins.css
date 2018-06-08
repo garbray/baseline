@@ -114,11 +114,12 @@
 /* ---------------------------------------
 //     2. Media queries
 // --------------------------------------- */
-/* @custom-media --phone (width >= 0) and (width <= $screen-sm-max);
-@custom-media --phone-large (width >= $screen-xs) and (width <= $screen-sm-max);
-@custom-media --tablet (width >= $screen-sm) and (width <= $screen-md);
-@custom-media --desktop (min-width: $screen-lg);
-@custom-media --desktop-large (min-width: $screen-xl); */
+@custom-media --phone (width >= 0) and (width < 768px);
+@custom-media --phone-large (width >= 480px) and (width < 768px);
+@custom-media --tablet (width >= 768px) and (width < 1024px);
+@custom-media --tablet-min (min-width: 768px);
+@custom-media --desktop (min-width: 1024px);
+@custom-media --desktop-large (min-width: 1440px);
 
 /* ---------------------------------------
 //     3. Font scale
@@ -126,14 +127,14 @@
 
 @define-mixin font-scale $fz-small, $fz-large, $lh-small, $lh-large {
   font-size: responsive $fz-small $fz-large; /* min-size, max-size */
-  font-range: 480px 1025px; /* viewport widths between which font-size is fluid */
+  font-range: 480px 1024px; /* viewport widths between which font-size is fluid */
   line-height: responsive $lh-small $lh-large;
-  line-height-range: 480px 1025px;
+  line-height-range: 480px 1024px;
 }
 
 @define-mixin letter-spacing $ls-small, $ls-large {
   letter-spacing: responsive $ls-small $ls-large;
-  letter-spacing-range: 480px 1025px;
+  letter-spacing-range: 480px 1024px;
 }
 
 /* ---------------------------------------
@@ -145,7 +146,7 @@
 // --------------------------------------- */
 
 @define-mixin flexgrid $direction: row, $flow: wrap, $align: initial,
-  $justfity: initial, $container-width: $max-width {
+  $justfity: initial, $container-width: 1920px {
   align-items: $align;
   display: flex;
   flex: 0 1 auto;
@@ -155,10 +156,18 @@
   max-width: $container-width;
 }
 
-@define-mixin flexcolumn $columns, $total-columns: 12, $gutter: $gutter-width {
+@define-mixin flexcolumn $columns, $total-columns: 14 {
   flex: $columns $columns auto;
   flex-basis: $columns;
   flex-grow: 1;
-  max-width: (100 / ($total-columns / $columns)) * 1%;
-  padding: 0 $gutter / 2;
+  max-width: calc(100% / ($total-columns / $columns));
+  padding: 0 var(--gutter-small);
+
+  @media (--tablet) {
+    padding: 0 var(--gutter-medium);
+  }
+
+  @media (--desktop) {
+    padding: 0 var(--gutter-large);
+  }
 }
