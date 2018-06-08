@@ -66,13 +66,13 @@
 @define-mixin emprint-condensed-semi-bold {
   font-family: 'EMprint-CondensedSemibold', Helvetica, Arial, sans-serif;
   font-style: normal;
-  font-weight: demi;
+  font-weight: normal;
 }
 
 @define-mixin emprint-condensed-semi-bold-it {
   font-family: 'EMprint-CondSemiboldIt', Helvetica, Arial, sans-serif;
   font-style: italic;
-  font-weight: demi;
+  font-weight: normal;
 }
 
 @define-mixin emprint-lgt {
@@ -101,14 +101,14 @@
 
 @define-mixin emprint-semi-bold {
   font-family: 'EMprint-Semibold', Helvetica, Arial, sans-serif;
-  font-style: italic;
-  font-weight: demi;
+  font-style: normal;
+  font-weight: normal;
 }
 
 @define-mixin emprint-semi-bold-it {
   font-family: 'EMprint-SemiboldItalic', Helvetica, Arial, sans-serif;
   font-style: italic;
-  font-weight: demi;
+  font-weight: normal;
 }
 
 /* ---------------------------------------

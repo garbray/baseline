@@ -6,10 +6,11 @@
 //
 //     Table of Contents:
 //
-//     1. Color boxes
+//     1. Color Box Mixins
+//     2. Color Boxes
 
 // ---------------------------------------
-//     1. Color boxes
+//     1. Color Box Mixins
 // --------------------------------------- */
 
 @define-mixin bg-colorbox $color {
@@ -17,6 +18,10 @@
     background-color: var($color);
   }
 }
+
+/* ---------------------------------------
+//     2. Color Boxes
+// --------------------------------------- */
 
 .color-palette {
   padding: 10px;
