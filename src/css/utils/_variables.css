@@ -12,7 +12,9 @@
   /**
    * Basic gutter sizing.  Elements are spaced horizontally by 30px.
    */
-  --gutter: 30px;
+  --gutter-small: 10px;
+  --gutter-medium: 15px;
+  --gutter-large: 22px;
 
   /*
    * Media queries breakpoints

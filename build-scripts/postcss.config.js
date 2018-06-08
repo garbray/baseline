@@ -38,6 +38,9 @@ module.exports = () => ({
       mediaQuery: true,
       minPixelValue: 0,
     }),
+    // Adding sass like mixins and variables.
+    // https://github.com/jonathantneal/precss
+    require('precss'),
     require('cssnano')({
       preset: 'default',
       autoprefixer: false,
