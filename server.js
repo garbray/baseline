@@ -19,6 +19,7 @@ const router = require('./utils/router');
 nunjucks.configure(`${__dirname}/src/templates`, {
   autoescape: true,
   express: app,
+  watch:true
 });
 
 if (isDevelopment) {
