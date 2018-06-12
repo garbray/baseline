@@ -15,4 +15,8 @@ module.exports = app => {
   app.get('/typography', (req, res) => {
     res.render('pages/sg-typography.html');
   });
+  // Article
+  app.get('/article', (req, res) => {
+    res.render('pages/article.html');
+  });
 };

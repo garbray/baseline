@@ -21,9 +21,10 @@
   </nav>
   <main class="main-content">
     {% block content %} {% endblock %}
+    {% set className = "grid-hide" %}
+    {% include "components/grid/grid-helper.html" %}
   </main>
   <script src="vendors-main.bundle.js"></script>
   <script src="main.bundle.js"></script>
 </body>
-
 </html>
