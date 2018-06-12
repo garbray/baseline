@@ -8,23 +8,21 @@
 {% endmacro %}
 
 {% macro typographyBox(tagName, textTitle, textHelper, helperTagName, variation) %}
-  <section class="sg-typography">
-    <div class="col-left">
-      <span class="sg-text-helper">
-        {% if helperTagName %}
-          {{ helperTagName | upper }}
-        {% else %}
-          {{ tagName | upper }}
-        {% endif %}
-      </span>
-    </div>
-    <div class="col-right">
-      <{{ tagName }}
-        {% if variation %}
-          class="{{ variation }}"
-        {% endif %}
-      >{{ textTitle }}</{{ tagName }}>
-      <span class="sg-text-helper">{{ textHelper }}</span>
-    </div>
-  </section>
+  <div class="col-left">
+    <span class="sg-text-helper">
+      {% if helperTagName %}
+        {{ helperTagName | upper }}
+      {% else %}
+        {{ tagName | upper }}
+      {% endif %}
+    </span>
+  </div>
+  <div class="col-right">
+    <{{ tagName }}
+      {% if variation %}
+        class="{{ variation }}"
+      {% endif %}
+    >{{ textTitle }}</{{ tagName }}>
+    <span class="sg-text-helper">{{ textHelper }}</span>
+  </div>
 {% endmacro %}

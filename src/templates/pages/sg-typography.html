@@ -6,38 +6,47 @@
   <section class="container">
     <div>
       <h1>Typography</h1>
-      {{ sgHelper.typographyBox('h1',
-        'Developing technology solutions', 'EMprint Light / 70px / 80px (L) / -1px (T) / #333333 / #ffffff') }}
-      {{ sgHelper.typographyBox('h2',
-        'Environmental performance', 'EMprint Light / 48px / 64px (L) / -1px (T) / #333333 / #ffffff') }}
-      {{ sgHelper.typographyBox('h3',
-        'Related articles', 'EMprint Light / 34px / 44px (L) / -.5px (T) / #333333 / #ffffff') }}
-      {{ sgHelper.typographyBox('h4',
-        'What\'s next in advanced biofuel research?', 'EMprint Regular / 24px / 36px (L) / #333333 / #ffffff') }}
-      {{ sgHelper.typographyBox('h5',
-        'Carbon capture and storage', 'EMprint Regular / 20px / 32px (L) / #333333 / #ffffff') }}
-      {{ sgHelper.typographyBox('h6',
-        'The research challenge', 'EMprint Semibold / 16px / 28px (L) / #333333 / #ffffff') }}
-      {{ sgHelper.typographyBox(
-        'p',
-        'ExxonMobil recently launched a comprehensive review of the process safety
-        practices used across the company to identify opportunities for improvement.
-        As part of this initiative, ExxonMobil senior leaders engaged an experienced
-        team to identify actions that can help reduce high-consequence process safety
-        events and near misses.',
-        'EMprint Regular / 14px / 24px (L) / 14px (P) / #6d6e71 / #333333 / #ffffff',
-        'p1'
-      ) }}
-      {{ sgHelper.typographyBox(
-        'p',
-        'ExxonMobil recently launched a comprehensive review of the process safety practices
-         used across the company to identify opportunities for improvement. As part of this
-         initiative, ExxonMobil senior leaders engaged an experienced team to identify actions
-         that can help reduce high-consequence process safety events and near misses. ',
-        'EMprint Regular / 14px / 24px (L) / 14px (P) / #6d6e71 / #333333 / #ffffff',
-        'p2',
-        'text-small'
-      ) }}
+      <section class="sg-typography">
+        {{ sgHelper.typographyBox('h1',
+          'Developing technology solutions', 'EMprint Light / 70px / 80px (L) / -1px (T) / #333333 / #ffffff') }}
+        {{ sgHelper.typographyBox('h2',
+          'Environmental performance', 'EMprint Light / 48px / 64px (L) / -1px (T) / #333333 / #ffffff') }}
+        {{ sgHelper.typographyBox('h3',
+          'Related articles', 'EMprint Light / 34px / 44px (L) / -.5px (T) / #333333 / #ffffff') }}
+        {{ sgHelper.typographyBox('h4',
+          'What\'s next in advanced biofuel research?', 'EMprint Regular / 24px / 36px (L) / #333333 / #ffffff') }}
+        {{ sgHelper.typographyBox('h5',
+          'Carbon capture and storage', 'EMprint Regular / 20px / 32px (L) / #333333 / #ffffff') }}
+        {{ sgHelper.typographyBox('h6',
+          'The research challenge', 'EMprint Semibold / 16px / 28px (L) / #333333 / #ffffff') }}
+        {{ sgHelper.typographyBox(
+          'p',
+          'ExxonMobil recently launched a comprehensive review of the process safety
+          practices used across the company to identify opportunities for improvement.
+          As part of this initiative, ExxonMobil senior leaders engaged an experienced
+          team to identify actions that can help reduce high-consequence process safety
+          events and near misses.',
+          'EMprint Regular / 14px / 24px (L) / 14px (P) / #6d6e71 / #333333 / #ffffff',
+          'p1'
+        ) }}
+        {{ sgHelper.typographyBox(
+          'p',
+          'ExxonMobil recently launched a comprehensive review of the process safety practices
+          used across the company to identify opportunities for improvement. As part of this
+          initiative, ExxonMobil senior leaders engaged an experienced team to identify actions
+          that can help reduce high-consequence process safety events and near misses. ',
+          'EMprint Regular / 14px / 24px (L) / 14px (P) / #6d6e71 / #333333 / #ffffff',
+          'p2',
+          'text-small'
+        ) }}
+        {{ sgHelper.typographyBox(
+          'p',
+          'Related articles',
+          'EMprint Semibold / 13px / 20px (L) / 1px (T) / #fe000c / #ffffff',
+          'Eyebrow',
+          'eyebrow'
+        ) }}
+      </section>
     </div>
   </section>
 {% endblock %}
