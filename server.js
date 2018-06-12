@@ -19,7 +19,7 @@ const router = require('./utils/router');
 nunjucks.configure(`${__dirname}/src/templates`, {
   autoescape: true,
   express: app,
-  watch:true
+  watch: true,
 });
 
 if (isDevelopment) {
@@ -50,6 +50,6 @@ app.listen(port, () => {
 
 bs.init({
   proxy: 'http://localhost:8000',
-  files: ['./dist/**.*'],
+  files: ['./dist/**.*', './src/**/*'],
   // port: 8080,
 });
