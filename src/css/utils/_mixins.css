@@ -156,18 +156,21 @@
   max-width: $container-width;
 }
 
-@define-mixin flexcolumn $columns, $total-columns: 14 {
+@define-mixin flexcolumn $columns, $total-columns: 14, $hasGutter: true {
   flex: $columns $columns auto;
   flex-basis: $columns;
   flex-grow: 1;
   max-width: calc(100% / ($total-columns / $columns));
-  padding: 0 var(--gutter-small);
 
-  @media (--tablet) {
-    padding: 0 var(--gutter-medium);
-  }
+  @if $hasGutter {
+    padding: 0 var(--gutter-small);
 
-  @media (--desktop) {
-    padding: 0 var(--gutter-large);
+    @media (--tablet) {
+      padding: 0 var(--gutter-medium);
+    }
+
+    @media (--desktop) {
+      padding: 0 var(--gutter-large);
+    }
   }
 }
