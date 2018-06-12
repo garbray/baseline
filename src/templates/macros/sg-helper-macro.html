@@ -1,0 +1,8 @@
+
+{% macro colorBox(colorName, colorCode) %}
+  <div class="color-palette">
+    <span class="colorbox colorbox{{ colorName }}"></span>
+    <p class="text-small colorname">C: {{ colorCode }}</p>
+    <p class="text-small colorname">V: {{ colorName }}</p>
+  </div>
+{% endmacro %}

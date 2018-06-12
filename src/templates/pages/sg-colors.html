@@ -1,167 +1,64 @@
-{% set title = 'Home' %} {% extends '../layout.html' %} {% block content %}
-<section class="container">
-  <h1>Color Palette</h1>
+{% set title = 'Home' %}
+{% import '../macros/sg-helper-macro.html' as sgHelper %}
+
+{% extends '../layout.html' %}
+{% block content %}
+  <section class="container">
+      <h1>Color Palette</h1>
+  </section>
+
   <section>
     <h2>ExxonMobil brand colors</h2>
     <section class="colors">
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-red"></span>
-        <p class="text-small colorname">C: #fe000c</p>
-        <p class="text-small colorname">V: --ex-red</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-blue"></span>
-        <p class="text-small colorname">C: #0c479d</p>
-        <p class="text-small colorname">V: --ex-blue</p>
-      </div>
+      {{ sgHelper.colorBox('--ex-red', '#fe000c') }}
+
+      {{ sgHelper.colorBox('--ex-blue', '#0c479d') }}
     </section>
   </section>
   <section>
     <h2>Elements</h2>
     <section class="colors">
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-el-red"></span>
-        <p class="text-small colorname">C: #d5000a</p>
-        <p class="text-small colorname">V: --ex-el-red</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-el-blue"></span>
-        <p class="text-small colorname">C: #2369bd</p>
-        <p class="text-small colorname">V: --ex-el-blue</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-el-light-blue"></span>
-        <p class="text-small colorname">C: #3c89e5</p>
-        <p class="text-small colorname">V: --ex-el-light-blue</p>
-      </div>
+      {{ sgHelper.colorBox('--ex-el-red', '#d5000a') }}
+      {{ sgHelper.colorBox('--ex-el-blue', '#2369bd') }}
+      {{ sgHelper.colorBox('--ex-el-light-blue', '#3c89e5') }}
+
     </section>
     <section class="colors">
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-black"></span>
-        <p class="text-small colorname">C: #333333</p>
-        <p class="text-small colorname">V: --ex-black</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-black-100"></span>
-        <p class="text-small colorname">C: #5a5a5a</p>
-        <p class="text-small colorname">V: --ex-black-100</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-black-200"></span>
-        <p class="text-small colorname">C: #6d6e71</p>
-        <p class="text-small colorname">V: --ex-black-200</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-black-300"></span>
-        <p class="text-small colorname">C: #939598</p>
-        <p class="text-small colorname">V: --ex-black-300</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-black-400"></span>
-        <p class="text-small colorname">C: #b1b3b6</p>
-        <p class="text-small colorname">V: --ex-black-400</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-black-500"></span>
-        <p class="text-small colorname">C: #d1d3d4</p>
-        <p class="text-small colorname">V: --ex-black-500</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-black-600"></span>
-        <p class="text-small colorname">C: #e6e7e8</p>
-        <p class="text-small colorname">V: --ex-black-600</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-black-700"></span>
-        <p class="text-small colorname">C: #f1f2f2</p>
-        <p class="text-small colorname">V: --ex-black-700</p>
-      </div>
+    {{ sgHelper.colorBox('--ex-black', '#333333') }}
+    {{ sgHelper.colorBox('--ex-black-100', '#5a5a5a') }}
+    {{ sgHelper.colorBox('--ex-black-200', '#6d6e71') }}
+    {{ sgHelper.colorBox('--ex-black-300', '#939598') }}
+    {{ sgHelper.colorBox('--ex-black-400', '#b1b3b6') }}
+    {{ sgHelper.colorBox('--ex-black-500', '#d1d3d4') }}
+    {{ sgHelper.colorBox('--ex-black-600', '#e6e7e8') }}
+    {{ sgHelper.colorBox('--ex-black-700', '#f1f2f2') }}
+
     </section>
   </section>
   <section>
     <h2>Accent</h2>
+
     <section class="colors">
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-red"></span>
-        <p class="text-small colorname">C: #990e29</p>
-        <p class="text-small colorname">V: --ex-accent-red</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-orange"></span>
-        <p class="text-small colorname">C: #f95421</p>
-        <p class="text-small colorname">V: --ex-accent-orange</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-orange-100"></span>
-        <p class="text-small colorname">C: #fc7e00</p>
-        <p class="text-small colorname">V: --ex-accent-orange-100</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-orange-200"></span>
-        <p class="text-small colorname">C: #ffac3e</p>
-        <p class="text-small colorname">V: --ex-accent-orange-200</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-yellow"></span>
-        <p class="text-small colorname">C: #ffd700</p>
-        <p class="text-small colorname">V: --ex-accent-yellow</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-lemon"></span>
-        <p class="text-small colorname">C: #b4d405</p>
-        <p class="text-small colorname">V: --ex-accent-lemon</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-green"></span>
-        <p class="text-small colorname">C: #00a14d</p>
-        <p class="text-small colorname">V: --ex-accent-green</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-aqua"></span>
-        <p class="text-small colorname">C: #00aca8</p>
-        <p class="text-small colorname">V: --ex-accent-aqua</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-ocean"></span>
-        <p class="text-small colorname">C: #007096</p>
-        <p class="text-small colorname">V: --ex-accent-ocean</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-sky"></span>
-        <p class="text-small colorname">C: #00a3e0</p>
-        <p class="text-small colorname">V: --ex-accent-sky</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-blue"></span>
-        <p class="text-small colorname">C: #002f6c</p>
-        <p class="text-small colorname">V: --ex-accent-blue</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-blue-100"></span>
-        <p class="text-small colorname">C: #3a397b</p>
-        <p class="text-small colorname">V: --ex-accent-blue-100</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-affair"></span>
-        <p class="text-small colorname">C: #7a4183</p>
-        <p class="text-small colorname">V: --ex-accent-affair</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-red-violet"></span>
-        <p class="text-small colorname">C: #bd2f7f</p>
-        <p class="text-small colorname">V: --ex-accent-red-violet</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-violet"></span>
-        <p class="text-small colorname">C: #890c58</p>
-        <p class="text-small colorname">V: --ex-accent-violet</p>
-      </div>
-      <div class="color-palette">
-        <span class="colorbox colorbox--ex-accent-cabaret"></span>
-        <p class="text-small colorname">C: #d73872</p>
-        <p class="text-small colorname">V: --ex-accent-cabaret</p>
-      </div>
+      {{ sgHelper.colorBox('--ex-accent-red', '#990e29') }}
+      {{ sgHelper.colorBox('--ex-accent-orange', '#f95421') }}
+      {{ sgHelper.colorBox('--ex-accent-orange-100', '#fc7e00') }}
+      {{ sgHelper.colorBox('--ex-accent-orange-200', '#ffac3e') }}
+      {{ sgHelper.colorBox('--ex-accent-yellow', '#ffd700') }}
+      {{ sgHelper.colorBox('--ex-accent-lemon', '#b4d405') }}
+      {{ sgHelper.colorBox('--ex-accent-green', '#00a14d') }}
+      {{ sgHelper.colorBox('--ex-accent-aqua', '#00aca8') }}
+      {{ sgHelper.colorBox('--ex-accent-ocean', '#007096') }}
+      {{ sgHelper.colorBox('--ex-accent-sky', '#00a3e0') }}
+      {{ sgHelper.colorBox('--ex-accent-blue', '#002f6c') }}
+      {{ sgHelper.colorBox('--ex-accent-blue-100', '#3a397b') }}
+      {{ sgHelper.colorBox('--ex-accent-affair', '#7a4183') }}
+      {{ sgHelper.colorBox('--ex-accent-red-violet', '#bd2f7f') }}
+      {{ sgHelper.colorBox('--ex-accent-red-violet', '#bd2f7f') }}
+      {{ sgHelper.colorBox('--ex-accent-violet', '#890c58') }}
+      {{ sgHelper.colorBox('--ex-accent-cabaret', '#d73872') }}
     </section>
   </section>
-</section>
+
+{% set className = "grid-hide" %}
+{% include "../components/grid/grid-helper.html" %}
 {% endblock %}
