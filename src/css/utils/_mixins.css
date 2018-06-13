@@ -13,6 +13,12 @@
 
 // ---------------------------------------
 //     1. Fonts
+//     2. Media queries
+//     3. Font scale
+//     4. Grid / Column
+//      4.1 flexbox columns
+//      4.2 push-column
+//     5. Clearfix
 // --------------------------------------- */
 
 @define-mixin emprint-bold {
@@ -142,7 +148,7 @@
 // ---------------------------------------
 
 // ---------------------------------------
-//     4.1 flexbox columns columns
+//     4.1 flexbox columns
 // --------------------------------------- */
 
 @define-mixin flexgrid $direction: row, $flow: wrap, $align: initial,
@@ -172,5 +178,30 @@
     @media (--desktop) {
       padding: 0 var(--gutter-large);
     }
+  }
+}
+
+// ---------------------------------------
+//     4.2 push-column
+// --------------------------------------- */
+
+@define-mixin push-column $columns, $total-columns: 14 {
+  margin-left: calc(100% / ($total-columns / $columns));
+}
+
+/* ---------------------------------------
+//     5. Clearfix
+// --------------------------------------- */
+
+@define-@mixin clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
   }
 }
