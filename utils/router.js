@@ -1,7 +1,9 @@
+const data = require('../mocks/');
+
 module.exports = app => {
   // Index Page
   app.get('/', (req, res) => {
-    res.render('pages/index.html');
+    res.render('pages/index.html', data.article);
   });
   // Colors Page
   app.get('/colors', (req, res) => {
